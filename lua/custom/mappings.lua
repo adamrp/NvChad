@@ -7,5 +7,9 @@ M.arp = {
     ["n"] = {"nzzzv"},
     ["N"] = {"Nzzzv"},
   },
+  v = {
+    ["<C-j>"] = {":m '>+1<CR>gv=gv"},
+    ["<C-k>"] = {":m '<-2<CR>gv=gv"},
+  },
 }
 return M
