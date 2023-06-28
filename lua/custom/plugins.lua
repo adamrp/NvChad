@@ -1,10 +1,17 @@
 local plugins = {
   {
     "williamboman/mason.nvim",
+    lazy=false,
     opts = {
+      PATH="append",
       ensure_installed = {
         "pyright",
         "lua-language-server",
+        "mypy",
+        "isort",
+        "flake8",
+        "cfn-lint",
+        "black",
       },
     },
   },
