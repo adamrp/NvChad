@@ -1,3 +1,4 @@
+require "custom.vim_opts"
 ---@type ChadrcConfig 
  local M = {}
  M.ui = {theme = 'chadracula'}
