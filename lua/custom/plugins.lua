@@ -41,11 +41,11 @@ local plugins = {
         dapui.open()
       end
       -- dap.listeners.before.event_terminated["dapui_config"] = function()
-      --   dapui.close()
+      --   dapui.float_element("console", {width=160, height=40})
       -- end
-      -- dap.listeners.before.event_exited["dapui_config"] = function()
-      --   dapui.close()
-      -- end
+      dap.listeners.after.event_exited["dapui_config"] = function()
+        dapui.float_element("console", {width=160, height=40})
+      end
       require("core.utils").load_mappings("dapui")
     end,
   },
