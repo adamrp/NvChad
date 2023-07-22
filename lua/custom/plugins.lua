@@ -23,6 +23,12 @@ local plugins = {
     end,
   },
   {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      return require "custom.configs.nvimtree"
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
