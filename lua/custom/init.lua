@@ -4,3 +4,29 @@ local p = "(.-/mason/bin):?"
 --if count > 1 then
 vim.env.PATH = string.gsub(vim.env.PATH, p, "")
 --end
+
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd("BufEnter", {
+  callback = function()
+    vim.opt_local.winhighlight = ""
+  end
+})
+
+local grayout = function()
+  vim.cmd [[
+    hi MyNormalNC guibg=#0a0a0a guifg=#555555
+    ]]
+  local settings = {}
+  for group, _ in pairs(vim.api.nvim_get_hl(0, {})) do
+    table.insert(settings, group .. ":MyNormalNC")
+  end
+  vim.opt_local.winhighlight = table.concat(settings, ",")
+  if vim.bo.filetype == "NvimTree" then
+    vim.cmd "q"
+  end
+end
+
+autocmd("WinLeave", {
+  callback = grayout,
+})
