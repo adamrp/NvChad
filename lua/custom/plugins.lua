@@ -72,5 +72,9 @@ local plugins = {
       require("core.utils").load_mappings("dap_python")
     end,
   },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy=false,
+  },
 }
 return plugins

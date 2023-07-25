@@ -54,6 +54,13 @@ M.arp = {
     ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
     ["<leader>sx"] = {"<cmd> close <CR>", "Close current split window"},
     ["<leader>sm"] = {"<cmd> MaximizerToggle <CR>", "Toggle Pane Maximization"},
+
+    ["<C-h>"] = {"<cmd> TmuxNavigateLeft <CR>", "Navigate window left"},
+    ["<C-j>"] = {"<cmd> TmuxNavigateDown <CR>", "Navigate window down"},
+    ["<C-k>"] = {"<cmd> TmuxNavigateUp <CR>", "Navigate window up"},
+    ["<C-l>"] = {"<cmd> TmuxNavigateRight <CR>", "Navigate window right"},
+
+    ["<leader>l"] = {"<cmd> set hlsearch! <CR>", "Toggle search highlighting"},
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
