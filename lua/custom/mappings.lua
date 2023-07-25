@@ -50,6 +50,10 @@ M.arp = {
     ["J"] = {"mzJ`z", "Join next line & keep cursor in place"},
     ["n"] = {"nzzzv", "Go to next match and center"},
     ["N"] = {"Nzzzv", "Go to prev match and center"},
+    ["<leader>sv"] = {"<C-w>v", "Split window vertically"},
+    ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
+    ["<leader>sx"] = {"<cmd> close <CR>", "Close current split window"},
+    ["<leader>sm"] = {"<cmd> MaximizerToggle <CR>", "Toggle Pane Maximization"},
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
