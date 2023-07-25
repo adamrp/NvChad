@@ -74,6 +74,20 @@ local plugins = {
     end,
   },
   {
+    "NvChad/nvterm",
+    opts = require "custom.configs.nvterm",
+  },
+  {
+    "tpope/vim-surround",
+    lazy=false,
+  },
+  {
+    "tpope/vim-repeat",
+    dependencies = {
+      "tpope/vim-surround",
+    }
+  },
+  {
     "christoomey/vim-tmux-navigator",
     lazy=false,
   },
