@@ -7,6 +7,12 @@ vim.env.PATH = string.gsub(vim.env.PATH, p, "")
 
 local autocmd = vim.api.nvim_create_autocmd
 
+autocmd("WinEnter", {
+  callback = function()
+    vim.opt_local.winhighlight = ""
+  end
+})
+
 autocmd("BufEnter", {
   callback = function()
     vim.opt_local.winhighlight = ""
@@ -30,3 +36,11 @@ end
 autocmd("WinLeave", {
   callback = grayout,
 })
+
+-- autocmd("TermOpen", {
+--   callback = function()
+--     --local command = 'call chansend(' .. vim.b.terminal_job_id .. ', "tmux new-window\r")'
+--     local command = 'call chansend(' .. vim.b.terminal_job_id .. ', ["tmux new -s vim", ""])'
+--     vim.cmd(command)
+--   end,
+-- })
