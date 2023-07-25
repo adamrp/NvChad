@@ -18,6 +18,7 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
+    lazy=false,
     opts = function()
       return require "custom.configs.null-ls"
     end,
