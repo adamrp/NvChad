@@ -20,6 +20,9 @@ autocmd("BufEnter", {
 })
 
 local grayout = function()
+  if string.sub(vim.bo.filetype, 1, 3) == "dap" then
+    return
+  end
   vim.cmd [[
     hi MyNormalNC guibg=#0a0a0a guifg=#555555
     ]]
