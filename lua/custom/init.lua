@@ -13,6 +13,13 @@ autocmd("WinEnter", {
   end
 })
 
+autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.opt.colorcolumn = "110"
+  end
+})
+
 autocmd("BufEnter", {
   callback = function()
     vim.opt_local.winhighlight = ""
