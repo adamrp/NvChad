@@ -61,10 +61,14 @@ M.arp = {
     ["<C-l>"] = {"<cmd> TmuxNavigateRight <CR>", "Navigate window right"},
 
     ["<leader>l"] = {"<cmd> set hlsearch! <CR>", "Toggle search highlighting"},
+    ["<leader>d"] = {[["_d]], "Delete > black hole"},
+    ["<leader>c"] = {[["_c]], "Change > black hole"},
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
     ["<C-k>"] = {":m '<-2<CR>gv=gv", "Move selection up"},
+    ["<leader>d"] = {[["_d]], "Delete > black hole"},
+    ["<leader>c"] = {[["_c]], "Change > black hole"},
   },
 }
 return M
