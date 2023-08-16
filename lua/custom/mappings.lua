@@ -60,7 +60,6 @@ M.arp = {
     ["<C-k>"] = {"<cmd> TmuxNavigateUp <CR>", "Navigate window up"},
     ["<C-l>"] = {"<cmd> TmuxNavigateRight <CR>", "Navigate window right"},
 
-    ["<leader>l"] = {"<cmd> set hlsearch! <CR>", "Toggle search highlighting"},
     ["<leader>d"] = {[["_d]], "Delete > black hole"},
     ["<leader>c"] = {[["_c]], "Change > black hole"},
   },
