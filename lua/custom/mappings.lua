@@ -63,6 +63,8 @@ M.arp = {
     ["<leader>l"] = {"<cmd> set hlsearch! <CR>", "Toggle search highlighting"},
     ["<leader>d"] = {[["_d]], "Delete > black hole"},
     ["<leader>c"] = {[["_c]], "Change > black hole"},
+
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
