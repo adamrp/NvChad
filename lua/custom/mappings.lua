@@ -65,12 +65,15 @@ M.arp = {
     ["<leader>c"] = {[["_c]], "Change > black hole"},
 
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["gb"] = { "<cmd> GBrowse <CR>", "GBrowse" },
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
     ["<C-k>"] = {":m '<-2<CR>gv=gv", "Move selection up"},
     ["<leader>d"] = {[["_d]], "Delete > black hole"},
     ["<leader>c"] = {[["_c]], "Change > black hole"},
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["gb"] = { ":'<,'>GBrowse<CR>", "GBrowse" },
   },
 }
 return M
