@@ -88,16 +88,16 @@ local plugins = {
     },
   },
   {
-		"tpope/vim-fugitive",
+    "tpope/vim-fugitive",
     lazy=false,
-	},
+  },
   {
-		"tpope/vim-rhubarb",
-		dependencies = {
+    "tpope/vim-rhubarb",
+    dependencies = {
       "tpope/vim-fugitive"
     },
     lazy=false,
-	},
+  },
   {
     "christoomey/vim-tmux-navigator",
     lazy=false,
