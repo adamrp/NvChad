@@ -85,8 +85,19 @@ local plugins = {
     "tpope/vim-repeat",
     dependencies = {
       "tpope/vim-surround",
-    }
+    },
   },
+  {
+		"tpope/vim-fugitive",
+    lazy=false,
+	},
+  {
+		"tpope/vim-rhubarb",
+		dependencies = {
+      "tpope/vim-fugitive"
+    },
+    lazy=false,
+	},
   {
     "christoomey/vim-tmux-navigator",
     lazy=false,
@@ -94,6 +105,6 @@ local plugins = {
   {
     "szw/vim-maximizer",
     lazy=false,
-  },
+  }
 }
 return plugins
