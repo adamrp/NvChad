@@ -11,4 +11,14 @@ autocmd("FileType", {
   end
 })
 
+autocmd("FileType", {
+  pattern = {"lua", "json", "yaml"},
+  callback = function()
+    vim.opt.tabstop = 2
+    vim.opt.softtabstop = 2
+    vim.opt.shiftwidth = 2
+    vim.opt.expandtab = true
+  end
+})
+
 require "custom.vim_opts"
