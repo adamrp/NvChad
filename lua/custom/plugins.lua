@@ -89,14 +89,13 @@ local plugins = {
   },
   {
     "tpope/vim-fugitive",
-    lazy=false,
+    cmd = {"G", "Git", "GBrowse"},
+    dependencies = {
+      "tpope/vim-rhubarb",
+    },
   },
   {
     "tpope/vim-rhubarb",
-    dependencies = {
-      "tpope/vim-fugitive"
-    },
-    lazy=false,
   },
   {
     "christoomey/vim-tmux-navigator",
