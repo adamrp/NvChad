@@ -32,3 +32,4 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 vim.g.tmux_navigator_no_mappings = 1
+vim.opt.fillchars:append { diff = "╱" }

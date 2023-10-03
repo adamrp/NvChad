@@ -104,6 +104,10 @@ local plugins = {
   {
     "szw/vim-maximizer",
     lazy=false,
+  },
+  {
+    "sindrets/diffview.nvim",
+    cmd = "DiffviewOpen",
   }
 }
 return plugins
