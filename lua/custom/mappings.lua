@@ -43,6 +43,18 @@ M.dapui = {
   },
 }
 
+M.gitsigns = {
+  plugin = true,
+  n = {
+    ["<leader>ph"] = {
+      function()
+        require("gitsigns").preview_hunk_inline()
+      end,
+      "Preview hunk inline",
+    },
+  }
+}
+
 M.arp = {
   n = {
     ["<C-d>"] = {"M<C-d>zz", "Page down and center"},
