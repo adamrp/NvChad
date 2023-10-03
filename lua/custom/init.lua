@@ -42,6 +42,7 @@ local grayout = function()
     vim.cmd "q"
   end
 end
+require "custom.vim_opts"
 
 autocmd("WinLeave", {
   callback = grayout,
