@@ -12,7 +12,7 @@ autocmd("FileType", {
 })
 
 autocmd("FileType", {
-  pattern = {"lua", "json", "yaml"},
+  pattern = {"lua", "json", "yaml", "gitconfig"},
   callback = function()
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
