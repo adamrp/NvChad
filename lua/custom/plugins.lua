@@ -108,6 +108,10 @@ local plugins = {
   {
     "sindrets/diffview.nvim",
     cmd = "DiffviewOpen",
-  }
+  },
+  {
+    "windwp/nvim-autopairs",
+    enabled=false,
+  },
 }
 return plugins
