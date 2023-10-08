@@ -79,7 +79,7 @@ local plugins = {
   },
   {
     "tpope/vim-surround",
-    lazy=false,
+    event="BufEnter",
   },
   {
     "tpope/vim-repeat",
@@ -103,7 +103,7 @@ local plugins = {
   },
   {
     "szw/vim-maximizer",
-    lazy=false,
+    event="BufEnter",
   },
   {
     "sindrets/diffview.nvim",
