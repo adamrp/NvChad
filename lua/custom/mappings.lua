@@ -61,6 +61,30 @@ M.gitsigns = {
   }
 }
 
+M.persistence = {
+  plugin = true,
+  n = {
+    ["<leader>qs"] = {
+      function()
+        require("persistence").load()
+      end,
+      "Load session",
+    },
+    ["<leader>ql"] = {
+      function()
+        require("persistence").load({ last = true })
+      end,
+      "Load last session",
+    },
+    ["<leader>qd"] = {
+      function()
+        require("persistence").stop()
+      end,
+      "Stop session recording",
+    }
+  }
+}
+
 M.harpoon = {
   plugin = true,
   n = {

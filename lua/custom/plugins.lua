@@ -128,5 +128,17 @@ local plugins = {
       "ThePrimeagen/harpoon",
     },
   },
+  {
+    "folke/persistence.nvim",
+    lazy = false,
+    -- event = "BufReadPre",
+    opts = {
+      options = { "blank", "buffers", "curdir", "folds", "help", "tabpages", "winsize", "terminal" },
+    },
+    config = function()
+      require("persistence").setup()
+      require("core.utils").load_mappings("persistence")
+    end
+  },
 }
 return plugins
