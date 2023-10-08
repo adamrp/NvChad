@@ -1,4 +1,10 @@
 local M = {}
+M.telescope = {
+  n = {
+    ["<leader><C-r>"] = { "<cmd> Telescope command_history <CR>", "command history" },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {
