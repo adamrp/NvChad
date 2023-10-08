@@ -55,6 +55,55 @@ M.gitsigns = {
   }
 }
 
+M.harpoon = {
+  plugin = true,
+  n = {
+    ["<leader>H"] = { "<cmd> Telescope harpoon marks <CR>", "Marks in telescope" },
+    ["<A-a>"] = {
+      function()
+        require("harpoon.mark").add_file()
+      end,
+      "Add file",
+    },
+    ["<A-n>"] = {
+      function()
+        require("harpoon.ui").nav_next()
+      end,
+      "Nav next file",
+    },
+    ["<A-p>"] = {
+      function()
+        require("harpoon.ui").nav_prev()
+      end,
+      "Nav prev file",
+    },
+    ["<A-j>"] = {
+      function()
+        require("harpoon.ui").nav_file(1)
+      end,
+      "Nav file 1",
+    },
+    ["<A-k>"] = {
+      function()
+        require("harpoon.ui").nav_file(2)
+      end,
+      "Nav file 2",
+    },
+    ["<A-l>"] = {
+      function()
+        require("harpoon.ui").nav_file(3)
+      end,
+      "Nav file 3",
+    },
+    ["<A-;>"] = {
+      function()
+        require("harpoon.ui").nav_file(4)
+      end,
+      "Nav file 4",
+    },
+  }
+}
+
 M.arp = {
   n = {
     ["<C-d>"] = {"M<C-d>zz", "Page down and center"},

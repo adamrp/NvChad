@@ -113,5 +113,20 @@ local plugins = {
     "windwp/nvim-autopairs",
     enabled=false,
   },
+  {
+    "ThePrimeagen/harpoon",
+    event="BufEnter",
+    config = function()
+      require("harpoon").setup()
+      require("telescope").load_extension("harpoon")
+      require("core.utils").load_mappings("harpoon")
+    end,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "ThePrimeagen/harpoon",
+    },
+  },
 }
 return plugins
