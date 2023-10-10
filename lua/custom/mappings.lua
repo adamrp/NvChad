@@ -141,6 +141,7 @@ M.arp = {
     ["J"] = {"mzJ`z", "Join next line & keep cursor in place"},
     ["n"] = {"nzzzv", "Go to next match and center"},
     ["N"] = {"Nzzzv", "Go to prev match and center"},
+
     ["<leader>sv"] = {"<C-w>v", "Split window vertically"},
     ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
     ["<leader>sx"] = {"<cmd> close <CR>", "Close current split window"},
@@ -152,11 +153,23 @@ M.arp = {
     ["<C-l>"] = {"<cmd> TmuxNavigateRight <CR>", "Navigate window right"},
 
     ["<leader>l"] = {"<cmd> set hlsearch! <CR>", "Toggle search highlighting"},
+
     ["<leader>d"] = {[["_d]], "Delete > black hole"},
     ["<leader>c"] = {[["_c]], "Change > black hole"},
 
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+
     ["gb"] = { "<cmd> GBrowse <CR>", "GBrowse" },
+
+    ["]q"] = { "<cmd> cn <CR>", "Next quickfix" },
+    ["[q"] = { "<cmd> cN <CR>", "Prev quickfix" },
+    ["<leader>q"] = {
+      function()
+        vim.fn.setqflist({}, 'r')
+        vim.cmd("cclose")
+      end,
+      "Clear quickfix"
+    },
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
