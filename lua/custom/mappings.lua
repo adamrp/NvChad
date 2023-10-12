@@ -52,7 +52,7 @@ M.dapui = {
 M.gitsigns = {
   plugin = true,
   n = {
-    ["<leader>ph"] = {
+    ["<leader>phi"] = {
       function()
         require("gitsigns").preview_hunk_inline()
       end,
