@@ -1,4 +1,5 @@
 local M = {}
+
 M.telescope = {
   n = {
     ["<leader><C-r>"] = { "<cmd> Telescope command_history <CR>", "command history" },
@@ -132,6 +133,47 @@ M.harpoon = {
       "Nav file 4",
     },
   }
+}
+
+M.gh = {
+  plugin = true,
+  n = {
+    -- Commits
+    ["<leader>ghcc"] = { "<cmd>GHCloseCommit<cr>", "Close" },
+    ["<leader>ghce"] = { "<cmd>GHExpandCommit<cr>", "Expand" },
+    ["<leader>ghco"] = { "<cmd>GHOpenToCommit<cr>", "Open To" },
+    ["<leader>ghcp"] = { "<cmd>GHPopOutCommit<cr>", "Pop Out" },
+    ["<leader>ghcz"] = { "<cmd>GHCollapseCommit<cr>", "Collapse" },
+
+    -- Issues
+    ["<leader>ghip"] = { "<cmd>GHPreviewIssue<cr>", "Preview" },
+
+    -- Litee
+    ["<leader>ghlt"] = { "<cmd>LTPanel<cr>", "Toggle Panel" },
+
+    -- Review
+    ["<leader>ghrb"] = { "<cmd>GHStartReview<cr>", "Begin" },
+    ["<leader>ghrc"] = { "<cmd>GHCloseReview<cr>", "Close" },
+    ["<leader>ghrd"] = { "<cmd>GHDeleteReview<cr>", "Delete" },
+    ["<leader>ghre"] = { "<cmd>GHExpandReview<cr>", "Expand" },
+    ["<leader>ghrs"] = { "<cmd>GHSubmitReview<cr>", "Submit" },
+    ["<leader>ghrz"] = { "<cmd>GHCollapseReview<cr>", "Collapse" },
+
+    -- Pull Request
+    ["<leader>ghpc"] = { "<cmd>GHClosePR<cr>", "Close" },
+    ["<leader>ghpd"] = { "<cmd>GHPRDetails<cr>", "Details" },
+    ["<leader>ghpe"] = { "<cmd>GHExpandPR<cr>", "Expand" },
+    ["<leader>ghpo"] = { "<cmd>GHOpenPR<cr>", "Open" },
+    ["<leader>ghpp"] = { "<cmd>GHPopOutPR<cr>", "PopOut" },
+    ["<leader>ghpr"] = { "<cmd>GHRefreshPR<cr>", "Refresh" },
+    ["<leader>ghpt"] = { "<cmd>GHOpenToPR<cr>", "Open To" },
+    ["<leader>ghpz"] = { "<cmd>GHCollapsePR<cr>", "Collapse" },
+
+    -- Threads
+    ["<leader>ghtc"] = { "<cmd>GHCreateThread<cr>", "Create" },
+    ["<leader>ghtn"] = { "<cmd>GHNextThread<cr>", "Next" },
+    ["<leader>ghtt"] = { "<cmd>GHToggleThread<cr>", "Toggle" },
+  },
 }
 
 M.arp = {
