@@ -108,6 +108,17 @@ local plugins = {
   {
     "sindrets/diffview.nvim",
     cmd = "DiffviewOpen",
+    config = function()
+      local actions = require("diffview.actions")
+      require("diffview").setup({
+        -- enhanced_diff_hl = true,
+        keymaps = {
+          file_panel = {
+            { "n", "a", actions.toggle_stage_entry, { desc = "Stage / unstage the selected entry" } },
+          },
+        },
+      })
+    end
   },
   {
     "windwp/nvim-autopairs",

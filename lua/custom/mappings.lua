@@ -205,6 +205,8 @@ M.arp = {
     ["<leader>d"] = {[["_d]], "Delete > black hole"},
     ["<leader>c"] = {[["_c]], "Change > black hole"},
 
+    ["<leader>gd"] = {"<cmd> DiffviewOpen <CR>", "Diffview Open"},
+
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
 
     ["gb"] = { "<cmd> GBrowse <CR>", "GBrowse" },
