@@ -132,6 +132,12 @@ M.harpoon = {
       end,
       "Nav file 4",
     },
+    ["<A-'>"] = {
+      function()
+        require("harpoon.ui").nav_file(5)
+      end,
+      "Nav file 5",
+    },
   }
 }
 
