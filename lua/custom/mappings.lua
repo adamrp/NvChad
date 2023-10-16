@@ -59,6 +59,24 @@ M.gitsigns = {
       end,
       "Preview hunk inline",
     },
+    ["<leader>gsh"] = {
+      function()
+        require("gitsigns").stage_hunk()
+      end,
+      "Stage hunk",
+    },
+    ["<leader>gsH"] = {
+      function()
+        require("gitsigns").undo_stage_hunk()
+      end,
+      "Unstage hunk",
+    },
+    ["<leader>gsb"] = {
+      function()
+        require("gitsigns").stage_buffer()
+      end,
+      "Stage buffer",
+    },
   }
 }
 
