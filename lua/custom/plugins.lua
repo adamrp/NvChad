@@ -107,7 +107,7 @@ local plugins = {
   },
   {
     "sindrets/diffview.nvim",
-    cmd = "DiffviewOpen",
+    cmd = {"DiffviewOpen", "DiffviewFileHistory"},
     config = function()
       local actions = require("diffview.actions")
       require("diffview").setup({
