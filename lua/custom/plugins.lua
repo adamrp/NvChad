@@ -13,6 +13,7 @@ local plugins = {
         "cfn-lint",
         "black",
         "debugpy",
+        "yamllint",
       },
     },
   },
