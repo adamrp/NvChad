@@ -217,13 +217,32 @@ local plugins = {
               },
           },
       }, { prefix = "<leader>" })
-    end
+    end,
   },
   {
     'nvim-telescope/telescope-ui-select.nvim',
     config = function()
       require("telescope").load_extension("ui-select")
-    end
+    end,
+  },
+  {
+    "junegunn/fzf",
+    build = "./install --bin",
+    dependencies = { "ibhagwan/fzf-lua" },
+  },
+  {
+    'kevinhwang91/nvim-bqf',
+    ft = "qf",
+    dependencies = { "junegunn/fzf" },
+  },
+  {
+    "ibhagwan/fzf-lua",
+    -- optional for icon support
+    -- dependencies = { "nvim-tree/nvim-web-devicons" },
+    -- config = function()
+    --   -- calling `setup` is optional for customization
+    --   require("fzf-lua").setup({})
+    -- end
   },
 }
 return plugins

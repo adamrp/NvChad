@@ -233,7 +233,7 @@ M.arp = {
     ["]Q"] = { "<cmd> silent! cnewer <CR>", "Next quickfix list" },
     ["[q"] = { "<cmd> cN <CR>", "Prev quickfix" },
     ["[Q"] = { "<cmd> silent! colder <CR>", "Prev quickfix list" },
-    ["<leader>Q"] = { "<cmd> chistory <CR>", "Show quickfix lists" },
+    ["<leader>q"] = { "<cmd> cw <CR>", "Open quickfix window" },
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
