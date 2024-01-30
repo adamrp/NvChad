@@ -230,14 +230,10 @@ M.arp = {
     ["gb"] = { "<cmd> GBrowse <CR>", "GBrowse" },
 
     ["]q"] = { "<cmd> cn <CR>", "Next quickfix" },
+    ["]Q"] = { "<cmd> silent! cnewer <CR>", "Next quickfix list" },
     ["[q"] = { "<cmd> cN <CR>", "Prev quickfix" },
-    ["<leader>q"] = {
-      function()
-        vim.fn.setqflist({}, 'r')
-        vim.cmd("cclose")
-      end,
-      "Clear quickfix"
-    },
+    ["[Q"] = { "<cmd> silent! colder <CR>", "Prev quickfix list" },
+    ["<leader>Q"] = { "<cmd> chistory <CR>", "Show quickfix lists" },
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
