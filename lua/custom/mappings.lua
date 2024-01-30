@@ -233,7 +233,16 @@ M.arp = {
     ["]Q"] = { "<cmd> silent! cnewer <CR>", "Next quickfix list" },
     ["[q"] = { "<cmd> cN <CR>", "Prev quickfix" },
     ["[Q"] = { "<cmd> silent! colder <CR>", "Prev quickfix list" },
-    ["<leader>q"] = { "<cmd> cw <CR>", "Open quickfix window" },
+    ["<leader>q"] = {
+      function()
+        if vim.bo.filetype == "qf" then
+          vim.api.nvim_win_close(0, true)
+        else
+          vim.api.nvim_command("cw")
+        end
+      end,
+      "Open/close quickfix window",
+    },
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
