@@ -21,4 +21,8 @@ autocmd("FileType", {
   end
 })
 
+require('editorconfig').properties.colorcolumn = function(bufnr, val)
+  vim.opt.colorcolumn = val
+end
+
 require "custom.vim_opts"
