@@ -28,4 +28,24 @@ autocmd("FileType", {
   end
 })
 
+
+-- DETERMINE THE EXECUTABLE TO USE FOR PYTHON HOST PROG.
+-- SHOULD BE PYNVIM-SPECIFIC VIRTUAL ENV
+vim.g.loaded_python3_provider = nil
+-- vim.cmd("runtime python3_provider")
+local paths_to_check = {
+  "/home/adam/.pyenv/versions/pynvim/bin/python",
+}
+
+-- TMK this is _the_ way to iterate over a normal table (list)
+-- Don't need the first thing returned by ipairs (the index; == enumerate in python)
+for _, path in ipairs(paths_to_check) do
+  local test_file = io.open(path, "r")
+  if test_file ~= nil then
+    io.close(test_file)
+    vim.g.python3_host_prog = path
+    break
+  end
+end
+
 require "custom.vim_opts"
