@@ -207,6 +207,7 @@ M.arp = {
     ["J"] = {"mzJ`z", "Join next line & keep cursor in place"},
     ["n"] = {"nzzzv", "Go to next match and center"},
     ["N"] = {"Nzzzv", "Go to prev match and center"},
+    ["<leader>G"] = {"<C-g>", "Show current file status line"},
 
     ["<leader>sv"] = {"<C-w>v", "Split window vertically"},
     ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
