@@ -49,7 +49,7 @@ for _, path in ipairs(paths_to_check) do
 end
 
 autocmd("FileType", {
-  pattern = "DiffviewFiles",
+  pattern = { "DiffviewFiles", "DiffviewFileHistory" },
   callback = function()
     -- SET HIGHLIGHT GROUPS FOR DIFFVIEW
     vim.api.nvim_set_hl(0, "DiffviewDiffAdd", { bg = "#324f3b" } )
