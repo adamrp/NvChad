@@ -48,4 +48,15 @@ for _, path in ipairs(paths_to_check) do
   end
 end
 
+autocmd("FileType", {
+  pattern = "DiffviewFiles",
+  callback = function()
+    -- SET HIGHLIGHT GROUPS FOR DIFFVIEW
+    vim.api.nvim_set_hl(0, "DiffviewDiffAdd", { bg = "#324f3b" } )
+    vim.api.nvim_set_hl(0, "DiffviewDiffText", { bg = "#0d3162" } )
+    vim.api.nvim_set_hl(0, "DiffviewDiffChange", { bg = "#1E1D2D" } )
+    vim.api.nvim_set_hl(0, "DiffviewDiffAddAsDelete", { bg = "#4c0b0b" } )
+  end
+})
+
 require "custom.vim_opts"
