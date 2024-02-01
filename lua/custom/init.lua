@@ -4,7 +4,8 @@ vim.env.PATH = string.gsub(vim.env.PATH, p, "")
 
 local autocmd = vim.api.nvim_create_autocmd
 
-require('editorconfig').properties.colorcolumn = function(bufnr, val)
+-- do not need first argument (buffer number)
+require("editorconfig").properties.colorcolumn = function(_, val)
   vim.opt.colorcolumn = val
 end
 
@@ -12,7 +13,7 @@ autocmd("FileType", {
   pattern = "python",
   callback = function(opts)
     vim.opt.colorcolumn = "110"
-    require('editorconfig').config(opts.buf)
+    require("editorconfig").config(opts.buf)
   end
 })
 
@@ -23,7 +24,7 @@ autocmd("FileType", {
     vim.opt.softtabstop = 2
     vim.opt.shiftwidth = 2
     vim.opt.expandtab = true
-    require('editorconfig').config(opts.buf)
+    require("editorconfig").config(opts.buf)
   end
 })
 
