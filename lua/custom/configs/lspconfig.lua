@@ -8,7 +8,7 @@ local lspconfig = require("lspconfig")
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  root_dir = lspconfig.util.root_pattern('.git');
+  root_dir = lspconfig.util.root_pattern('.git'),
   --extra_paths = {vim.lsp.buf.list_workspace_folders()},
   filetypes = {"python"},
   settings = {
