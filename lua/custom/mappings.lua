@@ -1,8 +1,21 @@
 local M = {}
 
+M.disabled = {
+  n = {
+    ["<leader>h"] = "",
+    ["<leader>v"] = "",
+    ["<leader>rh"] = "",
+    ["<leader>ph"] = "",
+    ["<leader>gb"] = "",
+    ["<leader>td"] = "",
+  },
+}
+
 M.telescope = {
   n = {
     ["<leader><C-r>"] = { "<cmd> Telescope command_history <CR>", "command history" },
+    ["<leader>gb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
+    ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
   },
 }
 
@@ -52,31 +65,108 @@ M.dapui = {
 
 M.gitsigns = {
   plugin = true,
+  v = {
+
+    ["<leader>hs"] = {
+      function()
+        require("gitsigns").stage_hunk {vim.fn.line("."), vim.fn.line("v")}
+      end,
+      "Stage hunk (lines)",
+    },
+
+    ["<leader>hr"] = {
+      function()
+        require("gitsigns").reset_hunk {vim.fn.line("."), vim.fn.line("v")}
+      end,
+      "Reset hunk (lines)",
+    },
+
+  },
   n = {
-    ["<leader>phi"] = {
+    ["<leader>ghP"] = {
       function()
         require("gitsigns").preview_hunk_inline()
       end,
       "Preview hunk inline",
     },
-    ["<leader>gsh"] = {
+
+    ["<leader>ghs"] = {
       function()
         require("gitsigns").stage_hunk()
       end,
       "Stage hunk",
     },
-    ["<leader>gsH"] = {
+
+    ["<leader>ghr"] = {
+      function()
+        require("gitsigns").reset_hunk()
+      end,
+      "Reset hunk",
+    },
+
+    -- ["<leader>gha"] = {
+    --   function()
+    --     require("gitsigns").stage_buffer()
+    --   end,
+    --   "Stage buffer",
+    -- },
+
+    ["<leader>ghS"] = {
       function()
         require("gitsigns").undo_stage_hunk()
       end,
       "Unstage hunk",
     },
-    ["<leader>gsb"] = {
+
+    -- ["<leader>ghR"] = {
+    --   function()
+    --     require("gitsigns").reset_buffer()
+    --   end,
+    --   "Reset buffer",
+    -- },
+
+    ["<leader>ghp"] = {
       function()
-        require("gitsigns").stage_buffer()
+        require("gitsigns").preview_hunk()
       end,
-      "Stage buffer",
+      "Preview hunk",
     },
+
+    ["<leader>ghb"] = {
+      function()
+        require("gitsigns").blame_line{full=true}
+      end,
+      "Git blame line",
+    },
+
+    ["<leader>gtb"] = {
+      function()
+        require("gitsigns").toggle_current_line_blame()
+      end,
+      "Toggle current line blame",
+    },
+
+    -- ["<leader>ghd"] = {
+    --   function()
+    --     require("gitsigns").diffthis()
+    --   end,
+    --   "Diff this",
+    -- },
+
+    -- ["<leader>ghD"] = {
+    --   function()
+    --     require("gitsigns").diffthis("~")
+    --   end,
+    --   "Big diff this",
+    -- },
+
+    ["<leader>gtd"] = {
+      function()
+        require("gitsigns").toggle_delete()
+      end,
+      "Toggle delete",
+    },
+
   }
 }
 
