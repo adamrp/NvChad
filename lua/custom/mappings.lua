@@ -290,6 +290,24 @@ M.gh = {
   },
 }
 
+M.comment = {
+  n = {
+    ["<leader>#"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "Toggle comment",
+    },
+  },
+
+  v = {
+    ["<leader>#"] = {
+      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      "Toggle comment",
+    },
+  },
+}
+
 M.arp = {
   n = {
     ["<C-d>"] = {"M<C-d>zz", "Page down and center"},
