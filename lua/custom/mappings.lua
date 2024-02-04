@@ -299,7 +299,7 @@ M.arp = {
     ["N"] = {"Nzzzv", "Go to prev match and center"},
     ["<leader>G"] = {"<C-g>", "Show current file status line"},
     ["<leader>zz"] = {"<cmd> qa! <CR>", "Quit everything without checking"},
-    ["zz"] = {"<C-z>", "Quit everything without checking"},
+    ["<leader>."] = {"<C-z>", "Background (C-z) nvim"},
 
     ["<leader>sv"] = {"<C-w>v", "Split window vertically"},
     ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
