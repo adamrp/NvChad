@@ -330,8 +330,9 @@ M.arp = {
     ["<leader>q"] = {
       function()
         if vim.bo.filetype == "qf" then
-          vim.api.nvim_win_close(0, true)
+          vim.api.nvim_command("ccl")
         else
+          vim.api.nvim_command("ccl")
           vim.api.nvim_command("cw")
         end
       end,
