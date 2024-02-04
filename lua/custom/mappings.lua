@@ -318,7 +318,8 @@ M.arp = {
 
     ["<leader>gd"] = {"<cmd> DiffviewOpen <CR>", "Diffview Open"},
 
-    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>b"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>e"] = { "<cmd> enew <CR>", "New buffer" },
 
     ["gb"] = { "<cmd> GBrowse <CR>", "GBrowse" },
 
