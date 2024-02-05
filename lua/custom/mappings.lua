@@ -8,7 +8,9 @@ M.disabled = {
     ["<leader>ph"] = "",
     ["<leader>gb"] = "",
     ["<leader>td"] = "",
-    ["<leader>/"] = "",
+    -- Leaving this enabled even though there's also leader-# to comment stuff now
+    -- I had a plan to use leader-/ for something else, but now I can't remember...
+    -- ["<leader>/"] = "",
   },
 }
 
