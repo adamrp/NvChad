@@ -43,6 +43,34 @@ M.telescope = {
       "Live grep WORD",
     },
   },
+  v = {
+    ["<leader>fe"] = {
+      function()
+        local selected = GetVisualSelection()
+        -- Taken from https://github.com/Slotos/telescope.nvim/blob/1913b80c1821bf3a5a48af2b1577bdf965eb6f1d/lua/telescope/builtin/files.lua#L19C1-L36C4
+        local escape_chars = function(string)
+          return string.gsub(string, "[%(|%)|\\|%[|%]|%-|%{%}|%?|%+|%*|%^|%$|%.]", {
+            ["\\"] = "\\\\",
+            ["-"] = "\\-",
+            ["("] = "\\(",
+            [")"] = "\\)",
+            ["["] = "\\[",
+            ["]"] = "\\]",
+            ["{"] = "\\{",
+            ["}"] = "\\}",
+            ["?"] = "\\?",
+            ["+"] = "\\+",
+            ["*"] = "\\*",
+            ["^"] = "\\^",
+            ["$"] = "\\$",
+            ["."] = "\\.",
+          })
+        end
+        require("telescope.builtin").live_grep({default_text=escape_chars(selected)})
+      end,
+      "Live grep",
+    },
+  },
 }
 
 M.Undotree = {
