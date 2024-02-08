@@ -22,6 +22,12 @@ M.telescope = {
   },
 }
 
+M.Undotree = {
+  n = {
+    ["<leader>u"] = { "<cmd> UndotreeToggle <CR> <cmd> UndotreeFocus <CR>", "Toggle Undotree window" },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {

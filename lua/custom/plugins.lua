@@ -231,5 +231,14 @@ local plugins = {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  {
+    "mbbill/undotree",
+    cmd = { "UndotreeToggle", "UndotreeShow" },
+    config = function()
+      vim.g.undotree_WindowLayout = 2
+      vim.g.undotree_ShortIndicators = true
+      vim.g.undotree_DiffCommand = "diff"
+    end
+  },
 }
 return plugins
