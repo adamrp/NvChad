@@ -12,6 +12,11 @@ M.disabled = {
     -- I had a plan to use leader-/ for something else, but now I can't remember...
     -- ["<leader>/"] = "",
   },
+
+  v = {
+    ["<"] = "",
+    [">"] = "",
+  },
 }
 
 M.telescope = {
@@ -369,6 +374,8 @@ M.arp = {
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
     ["<C-k>"] = {":m '<-2<CR>gv=gv", "Move selection up"},
+    ["<C-h>"] = {"<gv", "Unindent"},
+    ["<C-l>"] = {">gv", "Indent"},
     ["<leader>d"] = {[["_d]], "Delete > black hole"},
     ["<leader>c"] = {[["_c]], "Change > black hole"},
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
