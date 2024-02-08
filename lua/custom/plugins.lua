@@ -261,5 +261,20 @@ local plugins = {
       vim.g.undotree_DiffCommand = "diff"
     end
   },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      local cmp = require "cmp"
+      local opts = require("plugins.configs.cmp")
+      opts.mapping["<CR>"] = nil
+      opts.mapping["<C-f>"] = nil
+      opts.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
+      opts.mapping["<C-u>"] = cmp.mapping.scroll_docs(-4)
+      opts.mapping["<C-Enter>"] = cmp.mapping.confirm {
+        behavior = cmp.ConfirmBehavior.Insert,
+        select = true,
+      }
+    end,
+  }
 }
 return plugins
