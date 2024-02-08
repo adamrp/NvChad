@@ -59,4 +59,12 @@ autocmd("FileType", {
   end
 })
 
+function GetVisualSelection()
+  local backup = vim.fn.getreginfo("y")
+  vim.cmd('normal "yy')
+  local yanked = vim.fn.getreg("y", 1)
+  vim.fn.setreg("y", backup)
+  return string.gsub(yanked, "\n.*", "")
+end
+
 require "custom.vim_opts"
