@@ -235,7 +235,7 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter-context",
     lazy = false,
     config = function()
-      require'treesitter-context'.setup{
+      require('treesitter-context').setup({
         enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
         min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
@@ -248,7 +248,7 @@ local plugins = {
         separator = nil,
         zindex = 20, -- The Z-index of the context window
         on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
-      }
+      })
       vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true, special = "gray" } )
     end,
   },
@@ -264,16 +264,16 @@ local plugins = {
   {
     "hrsh7th/nvim-cmp",
     opts = function()
-      local cmp = require "cmp"
+      local cmp = require("cmp")
       local opts = require("plugins.configs.cmp")
       opts.mapping["<CR>"] = nil
       opts.mapping["<C-f>"] = nil
       opts.mapping["<C-d>"] = cmp.mapping.scroll_docs(4)
       opts.mapping["<C-u>"] = cmp.mapping.scroll_docs(-4)
-      opts.mapping["<C-Enter>"] = cmp.mapping.confirm {
+      opts.mapping["<C-Enter>"] = cmp.mapping.confirm({
         behavior = cmp.ConfirmBehavior.Insert,
         select = true,
-      }
+      })
     end,
   }
 }
