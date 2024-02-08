@@ -24,6 +24,24 @@ M.telescope = {
     ["<leader><C-r>"] = { "<cmd> Telescope command_history <CR>", "command history" },
     ["<leader>gb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
     ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
+    ["<leader>fe"] = {
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      "Live grep",
+    },
+    ["<leader>fw"] = {
+      function()
+        require("telescope.builtin").live_grep({default_text=vim.fn.expand("<cword>")})
+      end,
+      "Live grep word",
+    },
+    ["<leader>fW"] = {
+      function()
+        require("telescope.builtin").live_grep({default_text=vim.fn.expand("<cWORD>")})
+      end,
+      "Live grep WORD",
+    },
   },
 }
 
