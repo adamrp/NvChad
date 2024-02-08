@@ -76,14 +76,14 @@ M.gitsigns = {
   plugin = true,
   v = {
 
-    ["<leader>hs"] = {
+    ["<leader>ghs"] = {
       function()
         require("gitsigns").stage_hunk {vim.fn.line("."), vim.fn.line("v")}
       end,
       "Stage hunk (lines)",
     },
 
-    ["<leader>hr"] = {
+    ["<leader>ghr"] = {
       function()
         require("gitsigns").reset_hunk {vim.fn.line("."), vim.fn.line("v")}
       end,
