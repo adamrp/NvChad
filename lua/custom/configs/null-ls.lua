@@ -11,6 +11,7 @@ local opts = {
     null_ls.builtins.diagnostics.golangci_lint,
     null_ls.builtins.code_actions.gomodifytags,
     null_ls.builtins.code_actions.gitsigns,
+    null_ls.builtins.code_actions.refactoring,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
