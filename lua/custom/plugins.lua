@@ -133,6 +133,7 @@ local plugins = {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "ThePrimeagen/harpoon",
+      "ThePrimeagen/refactoring.nvim",
       'nvim-telescope/telescope-ui-select.nvim',
     },
   },
@@ -318,12 +319,7 @@ local plugins = {
 
       -- load refactoring Telescope extension
       require("telescope").load_extension("refactoring")
-
-      vim.keymap.set(
-        {"n", "x"},
-        "<leader>rr",
-        function() require('telescope').extensions.refactoring.refactors() end
-      )
+      require("core.utils").load_mappings("refactoring")
     end,
   },
 }

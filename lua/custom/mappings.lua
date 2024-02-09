@@ -368,6 +368,26 @@ M.comment = {
   },
 }
 
+M.refactoring = {
+  plugin = true,
+  n = {
+    ["<leader>R"] = {
+      function()
+        require('telescope').extensions.refactoring.refactors()
+      end,
+      "Refactoring menu",
+    },
+  },
+  x = {
+    ["<leader>R"] = {
+      function()
+        require('telescope').extensions.refactoring.refactors()
+      end,
+      "Refactoring menu",
+    },
+  },
+}
+
 M.arp = {
   n = {
     ["<C-d>"] = {"M<C-d>zz", "Page down and center"},
