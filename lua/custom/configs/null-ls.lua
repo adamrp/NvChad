@@ -8,6 +8,7 @@ local opts = {
     null_ls.builtins.diagnostics.cfn_lint,
     null_ls.builtins.formatting.isort,
     null_ls.builtins.formatting.black,
+    null_ls.builtins.code_actions.gitsigns,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
