@@ -371,15 +371,27 @@ M.comment = {
 M.refactoring = {
   plugin = true,
   n = {
-    ["<leader>R"] = {
+    ["<leader>Rr"] = {
       function()
         require('telescope').extensions.refactoring.refactors()
       end,
       "Refactoring menu",
     },
+    ["<leader>Rp"] = {
+        function() require('refactoring').debug.printf({below = true}) end,
+      "Print statement",
+    },
+    ["<leader>RP"] = {
+        function() require('refactoring').debug.print_var() end,
+      "Print variable",
+    },
+    ["<leader>Rc"] = {
+        function() require('refactoring').debug.cleanup({}) end,
+      "Clear print statements",
+    },
   },
   x = {
-    ["<leader>R"] = {
+    ["<leader>Rr"] = {
       function()
         require('telescope').extensions.refactoring.refactors()
       end,

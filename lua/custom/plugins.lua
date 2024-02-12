@@ -309,7 +309,11 @@ local plugins = {
           cxx = false,
         },
         printf_statements = {},
-        print_var_statements = {},
+        print_var_statements = {
+          python = {
+            "print(f'custom print_var %s {str(%s)}')",
+          },
+        },
         show_success_message = false, -- shows a message with information about the refactor on success
         -- i.e. [Refactor] Inlined 3 variable occurrences
         extract_var_statements = {
