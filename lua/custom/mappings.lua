@@ -143,6 +143,35 @@ M.gitsigns = {
 
   },
   n = {
+    ["]c"] = {
+      function()
+        if vim.wo.diff then
+          return "]c"
+        end
+        vim.schedule(function()
+          require("gitsigns").next_hunk()
+          vim.api.nvim_command("normal! zz")
+        end)
+        return "<Ignore>"
+      end,
+      "Jump to next hunk",
+      opts = { expr = true },
+    },
+
+    ["[c"] = {
+      function()
+        if vim.wo.diff then
+          return "[c"
+        end
+        vim.schedule(function()
+          require("gitsigns").prev_hunk()
+          vim.api.nvim_command("normal! zz")
+        end)
+        return "<Ignore>"
+      end,
+      "Jump to prev hunk",
+      opts = { expr = true },
+    },
     ["<leader>ghP"] = {
       function()
         require("gitsigns").preview_hunk_inline()
@@ -164,26 +193,12 @@ M.gitsigns = {
       "Reset hunk",
     },
 
-    -- ["<leader>gha"] = {
-    --   function()
-    --     require("gitsigns").stage_buffer()
-    --   end,
-    --   "Stage buffer",
-    -- },
-
     ["<leader>ghS"] = {
       function()
         require("gitsigns").undo_stage_hunk()
       end,
       "Unstage hunk",
     },
-
-    -- ["<leader>ghR"] = {
-    --   function()
-    --     require("gitsigns").reset_buffer()
-    --   end,
-    --   "Reset buffer",
-    -- },
 
     ["<leader>ghp"] = {
       function()
@@ -204,27 +219,6 @@ M.gitsigns = {
         require("gitsigns").toggle_current_line_blame()
       end,
       "Toggle current line blame",
-    },
-
-    -- ["<leader>ghd"] = {
-    --   function()
-    --     require("gitsigns").diffthis()
-    --   end,
-    --   "Diff this",
-    -- },
-
-    -- ["<leader>ghD"] = {
-    --   function()
-    --     require("gitsigns").diffthis("~")
-    --   end,
-    --   "Big diff this",
-    -- },
-
-    ["<leader>gtd"] = {
-      function()
-        require("gitsigns").toggle_delete()
-      end,
-      "Toggle delete",
     },
 
   }
