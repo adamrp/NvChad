@@ -405,6 +405,7 @@ M.arp = {
     ["<leader>zz"] = {"<cmd> qa! <CR>", "Quit everything without checking"},
     ["<leader>."] = {"<C-z>", "Background (C-z) nvim"},
     ["<leader>v"] = {"pV`]=", "Paste and format"},
+    ["A-w"] = {"<cmd> set wrap! <CR>", "Toggle wrap"},
 
     ["<leader>sv"] = {"<C-w>v", "Split window vertically"},
     ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
