@@ -395,6 +395,9 @@ M.refactoring = {
 }
 
 M.arp = {
+  i = {
+    ["<C-Backspace>"] = {"<C-w>", "Delete previous word"},
+  },
   n = {
     ["<C-d>"] = {"M<C-d>zz", "Page down and center"},
     ["<C-u>"] = {"M<C-u>zz", "Page up and center"},
