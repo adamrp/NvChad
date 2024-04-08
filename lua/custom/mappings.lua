@@ -252,11 +252,11 @@ M.harpoon = {
   plugin = true,
   n = {
     ["<leader>H"] = { "<cmd> Telescope harpoon marks <CR>", "Marks in telescope" },
-    ["<A-a>"] = {
+    ["<C-h>"] = {
       function()
-        require("harpoon.mark").add_file()
+        require("harpoon.mark").toggle_file()
       end,
-      "Add file",
+      "Toggle file",
     },
     -- ["<A-n>"] = {
     --   function()
@@ -270,31 +270,61 @@ M.harpoon = {
     --   end,
     --   "Nav prev file",
     -- },
-    ["<A-u>"] = {
+    ["<C-!>"] = {
+      function()
+        require("harpoon.mark").set_current_at(1)
+      end,
+      "Set current buffer to file 1",
+    },
+    ["<C-1>"] = {
       function()
         require("harpoon.ui").nav_file(1)
       end,
       "Nav file 1",
     },
-    ["<A-i>"] = {
+    ["<C-@>"] = {
+      function()
+        require("harpoon.mark").set_current_at(2)
+      end,
+      "Set current buffer to file 2",
+    },
+    ["<C-2>"] = {
       function()
         require("harpoon.ui").nav_file(2)
       end,
       "Nav file 2",
     },
-    ["<A-o>"] = {
+    ["<C-#>"] = {
+      function()
+        require("harpoon.mark").set_current_at(3)
+      end,
+      "Set current buffer to file 3",
+    },
+    ["<C-3>"] = {
       function()
         require("harpoon.ui").nav_file(3)
       end,
       "Nav file 3",
     },
-    ["<A-p>"] = {
+    ["<C-$>"] = {
+      function()
+        require("harpoon.mark").set_current_at(4)
+      end,
+      "Set current buffer to file 4",
+    },
+    ["<C-4>"] = {
       function()
         require("harpoon.ui").nav_file(4)
       end,
       "Nav file 4",
     },
-    ["<A-[>"] = {
+    ["<C-%>"] = {
+      function()
+        require("harpoon.mark").set_current_at(5)
+      end,
+      "Set current buffer to file 5",
+    },
+    ["<C-5>"] = {
       function()
         require("harpoon.ui").nav_file(5)
       end,
