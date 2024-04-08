@@ -270,31 +270,31 @@ M.harpoon = {
     --   end,
     --   "Nav prev file",
     -- },
-    ["<A-j>"] = {
+    ["<A-u>"] = {
       function()
         require("harpoon.ui").nav_file(1)
       end,
       "Nav file 1",
     },
-    ["<A-k>"] = {
+    ["<A-i>"] = {
       function()
         require("harpoon.ui").nav_file(2)
       end,
       "Nav file 2",
     },
-    ["<A-l>"] = {
+    ["<A-o>"] = {
       function()
         require("harpoon.ui").nav_file(3)
       end,
       "Nav file 3",
     },
-    ["<A-;>"] = {
+    ["<A-p>"] = {
       function()
         require("harpoon.ui").nav_file(4)
       end,
       "Nav file 4",
     },
-    ["<A-'>"] = {
+    ["<A-[>"] = {
       function()
         require("harpoon.ui").nav_file(5)
       end,
