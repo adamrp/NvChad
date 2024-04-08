@@ -258,18 +258,18 @@ M.harpoon = {
       end,
       "Add file",
     },
-    ["<A-n>"] = {
-      function()
-        require("harpoon.ui").nav_next()
-      end,
-      "Nav next file",
-    },
-    ["<A-p>"] = {
-      function()
-        require("harpoon.ui").nav_prev()
-      end,
-      "Nav prev file",
-    },
+    -- ["<A-n>"] = {
+    --   function()
+    --     require("harpoon.ui").nav_next()
+    --   end,
+    --   "Nav next file",
+    -- },
+    -- ["<A-p>"] = {
+    --   function()
+    --     require("harpoon.ui").nav_prev()
+    --   end,
+    --   "Nav prev file",
+    -- },
     ["<A-j>"] = {
       function()
         require("harpoon.ui").nav_file(1)
