@@ -252,7 +252,7 @@ M.harpoon = {
   plugin = true,
   n = {
     ["<leader>H"] = { "<cmd> Telescope harpoon marks <CR>", "Marks in telescope" },
-    ["<C-h>"] = {
+    ["<C-S-h>"] = {
       function()
         require("harpoon.mark").toggle_file()
       end,
