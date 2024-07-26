@@ -40,6 +40,7 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  { "nvim-neotest/nvim-nio" },
   {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
@@ -61,6 +62,7 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
+    dependencies = "nvim-neotest/nvim-nio",
     config = function()
       require("core.utils").load_mappings("dap")
     end,
