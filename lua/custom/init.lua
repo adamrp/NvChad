@@ -18,7 +18,7 @@ autocmd("FileType", {
 })
 
 autocmd("FileType", {
-  pattern = {"html", "js", "lua", "json", "yaml", "gitconfig", "toml"},
+  pattern = {"html", "js", "lua", "json", "yaml", "gitconfig", "toml", "javascript"},
   callback = function(opts)
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
