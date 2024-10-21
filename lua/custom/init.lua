@@ -12,7 +12,6 @@ end
 autocmd("FileType", {
   pattern = "python",
   callback = function(opts)
-    vim.opt.colorcolumn = "120"
     require("editorconfig").config(opts.buf)
   end
 })
