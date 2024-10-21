@@ -1,7 +1,7 @@
 local plugins = {
   {
     "williamboman/mason.nvim",
-    lazy=false,
+    lazy = false,
     opts = {
       PATH="append",
       ensure_installed = {
@@ -22,7 +22,7 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    lazy=false,
+    lazy = false,
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -99,7 +99,6 @@ local plugins = {
   {
     "folke/persistence.nvim",
     lazy = false,
-    -- event = "BufReadPre",
     opts = {
       options = { "blank", "buffers", "curdir", "folds", "help", "tabpages", "winsize", "terminal" },
     },
