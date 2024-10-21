@@ -237,6 +237,12 @@ M.persistence = {
       end,
       "Load session",
     },
+    ["<leader>qS"] = {
+      function()
+        require("persistence").select()
+      end,
+      "Select session",
+    },
     ["<leader>ql"] = {
       function()
         require("persistence").load({ last = true })
