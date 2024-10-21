@@ -17,6 +17,10 @@ M.disabled = {
     ["<"] = "",
     [">"] = "",
   },
+
+  t = {
+    ["<C-x>"] = "",
+  },
 }
 
 M.telescope = {
@@ -445,11 +449,6 @@ M.arp = {
     ["<leader>sx"] = {"<cmd> close <CR>", "Close current split window"},
     ["<leader>sm"] = {"<cmd> MaximizerToggle <CR>", "Toggle Pane Maximization"},
 
-    ["<C-h>"] = {"<cmd> TmuxNavigateLeft <CR>", "Navigate window left"},
-    ["<C-j>"] = {"<cmd> TmuxNavigateDown <CR>", "Navigate window down"},
-    ["<C-k>"] = {"<cmd> TmuxNavigateUp <CR>", "Navigate window up"},
-    ["<C-l>"] = {"<cmd> TmuxNavigateRight <CR>", "Navigate window right"},
-
     ["<leader>l"] = {"<cmd> set hlsearch! <CR>", "Toggle search highlighting"},
 
     ["<leader>d"] = {[["_d]], "Delete > black hole"},
@@ -480,6 +479,7 @@ M.arp = {
   },
   v = {
     ["<C-j>"] = {":m '>+1<CR>gv=gv", "Move selection down"},
+
     ["<C-k>"] = {":m '<-2<CR>gv=gv", "Move selection up"},
     ["<C-h>"] = {"<gv", "Unindent"},
     ["<C-l>"] = {">gv", "Indent"},
@@ -487,6 +487,11 @@ M.arp = {
     ["<leader>c"] = {[["_c]], "Change > black hole"},
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
     ["gb"] = { ":'<,'>GBrowse<CR>", "GBrowse" },
+    ["<leader>sm"] = {"<Esc><cmd> MaximizerToggle <CR>gv", "Toggle Pane Maximization"},
+    ["<leader>sx"] = {"<Esc><cmd> close <CR>gv", "Close current split window"},
+  },
+  t = {
+    ["<Esc><Esc>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" },
   },
 }
 return M
