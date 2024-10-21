@@ -270,7 +270,7 @@ M.harpoon = {
     --   end,
     --   "Nav prev file",
     -- },
-    ["<C-!>"] = {
+    ["<C-S-!>"] = {
       function()
         require("harpoon.mark").set_current_at(1)
       end,
@@ -282,7 +282,7 @@ M.harpoon = {
       end,
       "Nav file 1",
     },
-    ["<C-@>"] = {
+    ["<C-S-@>"] = {
       function()
         require("harpoon.mark").set_current_at(2)
       end,
@@ -294,7 +294,7 @@ M.harpoon = {
       end,
       "Nav file 2",
     },
-    ["<C-#>"] = {
+    ["<C-S-#>"] = {
       function()
         require("harpoon.mark").set_current_at(3)
       end,
@@ -306,7 +306,7 @@ M.harpoon = {
       end,
       "Nav file 3",
     },
-    ["<C-$>"] = {
+    ["<C-S-$>"] = {
       function()
         require("harpoon.mark").set_current_at(4)
       end,
@@ -318,7 +318,7 @@ M.harpoon = {
       end,
       "Nav file 4",
     },
-    ["<C-%>"] = {
+    ["<C-S-%>"] = {
       function()
         require("harpoon.mark").set_current_at(5)
       end,
