@@ -17,10 +17,6 @@ M.disabled = {
     ["<"] = "",
     [">"] = "",
   },
-
-  t = {
-    ["<C-x>"] = "",
-  },
 }
 
 M.telescope = {
@@ -495,9 +491,6 @@ M.arp = {
     ["gb"] = { ":'<,'>GBrowse<CR>", "GBrowse" },
     ["<leader>sm"] = {"<Esc><cmd> MaximizerToggle <CR>gv", "Toggle Pane Maximization"},
     ["<leader>sx"] = {"<Esc><cmd> close <CR>gv", "Close current split window"},
-  },
-  t = {
-    ["<Esc><Esc>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" },
   },
 }
 return M
