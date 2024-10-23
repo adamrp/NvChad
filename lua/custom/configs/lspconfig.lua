@@ -18,12 +18,14 @@ lspconfig.pyright.setup({
     autoImportCompletions = true,
     python = {
       analysis = {
-        diagnosticMode = 'openFilesOnly',
         autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        -- we want to use mypy (from null-ls) for typechecking
+        -- useLibraryCodeForTypes = true,
         typeCheckingMode = 'off',
-        -- diagnosticSeverityOverrides = {
-        --   reportPrivateImportUsage = "none",
-        -- },
+        diagnosticSeverityOverrides = {
+          reportPrivateImportUsage = "none",
+        },
       },
     },
   },
