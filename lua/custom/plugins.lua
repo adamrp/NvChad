@@ -197,5 +197,28 @@ local plugins = {
       require("core.utils").load_mappings("refactoring")
     end,
   },
+  {
+    "zbirenbaum/copilot.lua",
+    dependencies = { "zbirenbaum/copilot-cmp" },
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+      filetypes = {
+        python = true,
+        markdown = true,
+        help = true,
+        lua = true,
+      },
+      copilot_node_command = vim.fn.expand("$HOME") .. "/.nvm/versions/node/v21.6.1/bin/node",
+    },
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  },
 }
 return plugins
