@@ -17,6 +17,13 @@ autocmd("FileType", {
 })
 
 autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt.textwidth = 120
+  end
+})
+
+autocmd("FileType", {
   pattern = {"html", "js", "lua", "json", "yaml", "gitconfig", "toml", "javascript", "css"},
   callback = function(opts)
     vim.opt.tabstop = 2
