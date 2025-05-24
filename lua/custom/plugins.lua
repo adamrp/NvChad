@@ -17,6 +17,7 @@ local plugins = {
         "gopls",
         "golangci-lint",
         "golangci-lint-langserver",
+        "snakefmt",
       },
     },
   },
