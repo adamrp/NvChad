@@ -9,7 +9,6 @@ local plugins = {
         "lua-language-server",
         "mypy",
         "isort",
-        "flake8",
         "cfn-lint",
         "black",
         "debugpy",
@@ -22,7 +21,7 @@ local plugins = {
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     lazy = false,
     opts = function()
       return require "custom.configs.null-ls"
